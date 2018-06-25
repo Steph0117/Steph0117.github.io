@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Notes," />
 
 
 
@@ -90,12 +90,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="VICKY&#39;S BLOG">
-<meta property="og:url" content="http://yoursite.com/categories/japan-travel/index.html">
+<meta name="description" content="用 SSD 擴充 TX1 Memory  Split Swap Area使用 head -n 1 /etc/nv_tegra_release 來確定 L4T (Linux for Tegra)的版本，R28.2 以上的版本可以直接進行 swapon [swapfile_name] 的指令 For TX1 with l4T version under 28.1R28.1 以及以下的版本都必須 Reb">
+<meta name="keywords" content="Notes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swap_area_on_tx1">
+<meta property="og:url" content="http://yoursite.com/2018/06/25/swap-area-on-tx1/index.html">
 <meta property="og:site_name" content="VICKY&#39;S BLOG">
+<meta property="og:description" content="用 SSD 擴充 TX1 Memory  Split Swap Area使用 head -n 1 /etc/nv_tegra_release 來確定 L4T (Linux for Tegra)的版本，R28.2 以上的版本可以直接進行 swapon [swapfile_name] 的指令 For TX1 with l4T version under 28.1R28.1 以及以下的版本都必須 Reb">
+<meta property="og:updated_time" content="2018-06-25T13:19:56.104Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VICKY&#39;S BLOG">
+<meta name="twitter:title" content="swap_area_on_tx1">
+<meta name="twitter:description" content="用 SSD 擴充 TX1 Memory  Split Swap Area使用 head -n 1 /etc/nv_tegra_release 來確定 L4T (Linux for Tegra)的版本，R28.2 以上的版本可以直接進行 swapon [swapfile_name] 的指令 For TX1 with l4T version under 28.1R28.1 以及以下的版本都必須 Reb">
 
 
 
@@ -123,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/japan-travel/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/25/swap-area-on-tx1/"/>
 
 
 
 
 
-  <title>分類: 日本旅遊 | VICKY'S BLOG</title>
+  <title>swap_area_on_tx1 | VICKY'S BLOG</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
@@ -155,7 +160,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -249,73 +254,152 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h1>日本旅遊<small>分類</small>
-      </h1>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/10/2017-August-Shikoku/" itemprop="url">
-              
-                <span itemprop="name">2017 August Shikoku</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-10T14:39:38+08:00"
-              content="2017-12-10" >
-          12-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/16/2016-September-Kyoto/" itemprop="url">
-              
-                <span itemprop="name">2016 September Kyoto</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-16T14:54:49+08:00"
-              content="2017-05-16" >
-          05-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/25/swap-area-on-tx1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Vicky Lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/Steph0117/blogphotos/master/profile.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VICKY'S BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">swap_area_on_tx1</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-06-25T20:26:05+08:00">
+                2018-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="用-SSD-擴充-TX1-Memory"><a href="#用-SSD-擴充-TX1-Memory" class="headerlink" title="用 SSD 擴充 TX1 Memory"></a>用 SSD 擴充 TX1 Memory</h1><iframe width="560" height="315" src="https://www.youtube.com/embed/6nzWt42mzqk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<h1 id="Split-Swap-Area"><a href="#Split-Swap-Area" class="headerlink" title="Split Swap Area"></a>Split Swap Area</h1><p>使用 <code>head -n 1 /etc/nv_tegra_release</code> 來確定 L4T (Linux for Tegra)的版本，R28.2 以上的版本可以直接進行 <code>swapon [swapfile_name]</code> 的指令</p>
+<h2 id="For-TX1-with-l4T-version-under-28-1"><a href="#For-TX1-with-l4T-version-under-28-1" class="headerlink" title="For TX1 with l4T version under 28.1"></a>For TX1 with l4T version under 28.1</h2><p>R28.1 以及以下的版本都必須 Rebuild Kernel，在<a href="&quot;https://github.com/jetsonhacks/buildJetsonTX1Kernel&quot;">連結</a> 的 releases 中選擇符合自己 l4T 以及 Jetson 版本的原始碼下載、解壓縮進入目錄中並依序執行<br><br><code>getKernelSources.sh</code><br><br><code>makeKernel.sh</code><br><br><code>copyImage.sh</code></p>
+<p>由於安裝完 SSD 後我們仍以 eMMC 開機，因此 Image 不該被 copy 至 <code>/boot/Image</code> 而應該 copy 到內建記憶體的 <code>/boot</code> 目錄下</p>
+<p>重開機後即可執行 swap 的分割作業</p>
+<h2 id="Split-Swap-Area-1"><a href="#Split-Swap-Area-1" class="headerlink" title="Split Swap Area"></a>Split Swap Area</h2><p>按照 <a href="&quot;https://www.ncnynl.com/archives/201705/1638.html&quot;">教學</a> 執行</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Notes/" rel="tag"># Notes</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/10/2017-August-Shikoku/" rel="next" title="2017 August Shikoku">
+                <i class="fa fa-chevron-left"></i> 2017 August Shikoku
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -342,8 +426,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://raw.githubusercontent.com/Steph0117/blogphotos/master/profile.jpg"
@@ -405,6 +498,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#用-SSD-擴充-TX1-Memory"><span class="nav-number">1.</span> <span class="nav-text">用 SSD 擴充 TX1 Memory</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Split-Swap-Area"><span class="nav-number">2.</span> <span class="nav-text">Split Swap Area</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#For-TX1-with-l4T-version-under-28-1"><span class="nav-number">2.1.</span> <span class="nav-text">For TX1 with l4T version under 28.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Split-Swap-Area-1"><span class="nav-number">2.2.</span> <span class="nav-text">Split Swap Area</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -518,6 +627,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 

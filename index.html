@@ -261,6 +261,122 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/25/swap-area-on-tx1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Vicky Lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/Steph0117/blogphotos/master/profile.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VICKY'S BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/25/swap-area-on-tx1/" itemprop="url">swap_area_on_tx1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-06-25T20:26:05+08:00">
+                2018-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="用-SSD-擴充-TX1-Memory"><a href="#用-SSD-擴充-TX1-Memory" class="headerlink" title="用 SSD 擴充 TX1 Memory"></a>用 SSD 擴充 TX1 Memory</h1><iframe width="560" height="315" src="https://www.youtube.com/embed/6nzWt42mzqk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<h1 id="Split-Swap-Area"><a href="#Split-Swap-Area" class="headerlink" title="Split Swap Area"></a>Split Swap Area</h1><p>使用 <code>head -n 1 /etc/nv_tegra_release</code> 來確定 L4T (Linux for Tegra)的版本，R28.2 以上的版本可以直接進行 <code>swapon [swapfile_name]</code> 的指令</p>
+<h2 id="For-TX1-with-l4T-version-under-28-1"><a href="#For-TX1-with-l4T-version-under-28-1" class="headerlink" title="For TX1 with l4T version under 28.1"></a>For TX1 with l4T version under 28.1</h2><p>R28.1 以及以下的版本都必須 Rebuild Kernel，在<a href="&quot;https://github.com/jetsonhacks/buildJetsonTX1Kernel&quot;">連結</a> 的 releases 中選擇符合自己 l4T 以及 Jetson 版本的原始碼下載、解壓縮進入目錄中並依序執行<br><br><code>getKernelSources.sh</code><br><br><code>makeKernel.sh</code><br><br><code>copyImage.sh</code></p>
+<p>由於安裝完 SSD 後我們仍以 eMMC 開機，因此 Image 不該被 copy 至 <code>/boot/Image</code> 而應該 copy 到內建記憶體的 <code>/boot</code> 目錄下</p>
+<p>重開機後即可執行 swap 的分割作業</p>
+<h2 id="Split-Swap-Area-1"><a href="#Split-Swap-Area-1" class="headerlink" title="Split Swap Area"></a>Split Swap Area</h2><p>按照 <a href="&quot;https://www.ncnynl.com/archives/201705/1638.html&quot;">教學</a> 執行</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/2017-August-Shikoku/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -666,7 +782,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">文章</span>
               </a>
             </div>
@@ -688,7 +804,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">標籤</span>
               </a>
             </div>
@@ -730,7 +846,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
