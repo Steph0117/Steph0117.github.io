@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="用 SSD 擴充 TX1 Memory  分割 Swap Area使用 head -n 1 /etc/nv_tegra_release 來確定 L4T (Linux for Tegra)的版本，R28.2 以上的版本可以直接進行 swapon [swapfile_name] 的指令 For TX1 with l4T version under 28.1R28.1 以及以下的版本都必須 Rebuil">
+<meta name="description" content="How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1##重新安裝 OpenCV 參考https://blog.csdn.net/StefanSalvatore/article/details/65936692 先卸載刷機時安裝的 opencv4tegra 安裝該安裝的 Package # Some general development">
 <meta name="keywords" content="Notes">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swap Area on TX1">
-<meta property="og:url" content="http://yoursite.com/2018/06/25/swap-area-on-tx1/index.html">
+<meta property="og:title" content="Onboard Camera on Jetson TX1">
+<meta property="og:url" content="http://yoursite.com/2018/06/27/onboard-camera-on-tx1/index.html">
 <meta property="og:site_name" content="VICKY&#39;S BLOG">
-<meta property="og:description" content="用 SSD 擴充 TX1 Memory  分割 Swap Area使用 head -n 1 /etc/nv_tegra_release 來確定 L4T (Linux for Tegra)的版本，R28.2 以上的版本可以直接進行 swapon [swapfile_name] 的指令 For TX1 with l4T version under 28.1R28.1 以及以下的版本都必須 Rebuil">
-<meta property="og:updated_time" content="2018-06-25T13:45:31.552Z">
+<meta property="og:description" content="How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1##重新安裝 OpenCV 參考https://blog.csdn.net/StefanSalvatore/article/details/65936692 先卸載刷機時安裝的 opencv4tegra 安裝該安裝的 Package # Some general development">
+<meta property="og:updated_time" content="2018-06-27T05:16:28.537Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swap Area on TX1">
-<meta name="twitter:description" content="用 SSD 擴充 TX1 Memory  分割 Swap Area使用 head -n 1 /etc/nv_tegra_release 來確定 L4T (Linux for Tegra)的版本，R28.2 以上的版本可以直接進行 swapon [swapfile_name] 的指令 For TX1 with l4T version under 28.1R28.1 以及以下的版本都必須 Rebuil">
+<meta name="twitter:title" content="Onboard Camera on Jetson TX1">
+<meta name="twitter:description" content="How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1##重新安裝 OpenCV 參考https://blog.csdn.net/StefanSalvatore/article/details/65936692 先卸載刷機時安裝的 opencv4tegra 安裝該安裝的 Package # Some general development">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/25/swap-area-on-tx1/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/27/onboard-camera-on-tx1/"/>
 
 
 
 
 
-  <title>Swap Area on TX1 | VICKY'S BLOG</title>
+  <title>Onboard Camera on Jetson TX1 | VICKY'S BLOG</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
@@ -264,7 +264,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/25/swap-area-on-tx1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/27/onboard-camera-on-tx1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Vicky Lin">
@@ -281,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Swap Area on TX1</h1>
+          <h1 class="post-title" itemprop="name headline">Onboard Camera on Jetson TX1</h1>
         
 
         <div class="post-meta">
@@ -293,8 +293,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-06-25T20:26:05+08:00">
-                2018-06-25
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-06-27T12:49:55+08:00">
+                2018-06-27
               </time>
             
 
@@ -348,13 +348,15 @@
       
 
       
-        <h1 id="用-SSD-擴充-TX1-Memory"><a href="#用-SSD-擴充-TX1-Memory" class="headerlink" title="用 SSD 擴充 TX1 Memory"></a>用 SSD 擴充 TX1 Memory</h1><iframe width="560" height="315" src="https://www.youtube.com/embed/6nzWt42mzqk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-<h1 id="分割-Swap-Area"><a href="#分割-Swap-Area" class="headerlink" title="分割 Swap Area"></a>分割 Swap Area</h1><p>使用 <code>head -n 1 /etc/nv_tegra_release</code> 來確定 L4T (Linux for Tegra)的版本，R28.2 以上的版本可以直接進行 <code>swapon [swapfile_name]</code> 的指令</p>
-<h2 id="For-TX1-with-l4T-version-under-28-1"><a href="#For-TX1-with-l4T-version-under-28-1" class="headerlink" title="For TX1 with l4T version under 28.1"></a>For TX1 with l4T version under 28.1</h2><p>R28.1 以及以下的版本都必須 Rebuild Kernel，在<a href="&quot;https://github.com/jetsonhacks/buildJetsonTX1Kernel&quot;">連結</a> 的 releases 中選擇符合自己 l4T 以及 Jetson 版本的原始碼下載、解壓縮進入目錄中並依序執行<br><br><code>getKernelSources.sh</code><br><br><code>makeKernel.sh</code><br><br><code>copyImage.sh</code></p>
-<p>由於安裝完 SSD 後我們仍以 eMMC 開機，因此 Image 不該被 copy 至 <code>/boot/Image</code> 而應該 copy 到內建記憶體的 <code>/boot</code> 目錄下</p>
-<p>重開機後即可執行 swap 的分割作業</p>
-<h2 id="Split-Swap-Area"><a href="#Split-Swap-Area" class="headerlink" title="Split Swap Area"></a>Split Swap Area</h2><p>按照 <a href="&quot;https://www.ncnynl.com/archives/201705/1638.html&quot;">教學</a> 執行</p>
+        <h1 id="How-to-Open-Onboard-Camera-On-Jetson-TX1-with-Jetpack-3-1"><a href="#How-to-Open-Onboard-Camera-On-Jetson-TX1-with-Jetpack-3-1" class="headerlink" title="How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1"></a>How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1</h1><p>##重新安裝 OpenCV</p>
+<p>參考<a href="&quot;https://blog.csdn.net/StefanSalvatore/article/details/65936692&quot;">https://blog.csdn.net/StefanSalvatore/article/details/65936692</a></p>
+<p>先卸載刷機時安裝的 opencv4tegra</p>
+<p>安裝該安裝的 Package</p>
+<p><code># Some general development libraries<br>sudo apt-get -y install build-essential make cmake cmake-curses-gui g++</code><br><code># libav video input/output development libraries<br>sudo apt-get -y install libavformat-dev libavutil-dev libswscale-dev  </code><br><code># Video4Linux camera development libraries<br>sudo apt-get -y install libv4l-dev</code><br><code># Eigen3 math development libraries<br>sudo apt-get -y install libeigen3-dev</code><br><code># OpenGL development libraries (to allow creating graphical windows)<br>sudo apt-get -y install libglew1.6-dev</code><br><code># GTK development libraries (to allow creating graphical windows)<br>sudo apt-get -y install libgtk2.0-dev</code></p>
+<p>從 Opencv 官網下載 2.4.13 版本的原始碼<br><code>mkdir build &amp;&amp; cd build<br><br>cmake -DWITH_CUDA=ON -DCUDA_ARCH_BIN=”5.3” -DCUDA_ARCH_PTX=”” -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DCUDA_FAST_MATH=ON .. <br><br>make -j8<br><br>make install</code></p>
+<p>用 <code>gst-launch-1.0 nvcamerasrc ! nvoverlaysink</code> 指令測試 onboard camera 是否能開啟</p>
+<p>在 Python 中用以下 code 打開 onboard camera 並讀取，參考<a href="&quot;https://jkjung-avt.github.io/tx2-camera-with-python/&quot;">https://jkjung-avt.github.io/tx2-camera-with-python/</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import cv2</div><div class="line">gst_str = (&quot;nvcamerasrc ! &quot; &quot;video/x-raw(memory:NVMM),</div><div class="line">width=(int)2592, height=(int)1458, format=(string)I420, framerate=(fraction)30/1 ! &quot;</div><div class="line">&quot;nvvidconv ! video/x-raw, width=(int)&#123;&#125;, height=(int)&#123;&#125;, format=(string)BGRx ! &quot;</div><div class="line">&quot;videoconvert ! appsink&quot;).format(width, height)</div><div class="line">cv2.VideoCapture(gst_str)</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -397,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/10/2017-August-Shikoku/" rel="next" title="2017 August Shikoku">
-                <i class="fa fa-chevron-left"></i> 2017 August Shikoku
+              <a href="/2018/06/25/swap-area-on-tx1/" rel="next" title="Swap Area on TX1">
+                <i class="fa fa-chevron-left"></i> Swap Area on TX1
               </a>
             
           </div>
@@ -406,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/27/onboard-camera-on-tx1/" rel="prev" title="Onboard Camera on Jetson TX1">
-                Onboard Camera on Jetson TX1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -534,7 +532,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#用-SSD-擴充-TX1-Memory"><span class="nav-number">1.</span> <span class="nav-text">用 SSD 擴充 TX1 Memory</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分割-Swap-Area"><span class="nav-number">2.</span> <span class="nav-text">分割 Swap Area</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#For-TX1-with-l4T-version-under-28-1"><span class="nav-number">2.1.</span> <span class="nav-text">For TX1 with l4T version under 28.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Split-Swap-Area"><span class="nav-number">2.2.</span> <span class="nav-text">Split Swap Area</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-Open-Onboard-Camera-On-Jetson-TX1-with-Jetpack-3-1"><span class="nav-number">1.</span> <span class="nav-text">How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1</span></a></li></ol></div>
             
 
           </div>
