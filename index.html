@@ -353,7 +353,7 @@
           
             <p>Reference to <a href="&#39;https://stackoverflow.com/questions/37126437/download-large-google-drive-files&#39;">https://stackoverflow.com/questions/37126437/download-large-google-drive-files</a></p>
 <p>Go to <strong><a href="&#39;https://developers.google.com/oauthplayground/&#39;">OAuth 2.0 Playground</a></strong></p>
-<p>In <strong>Select &amp; authorize APIs(Step 1)</strong>, select <strong>Drive API v3</strong> and then select<br><strong><a href="https://www.googleapis.com/auth/drive.readonly" target="_blank" rel="external">https://www.googleapis.com/auth/drive.readonly</a></strong> as the scope.</p>
+<p>In <strong>Select &amp; authorize APIs(Step 1)</strong>,<br>select <strong>Drive API v3</strong> and then select <strong><a href="https://www.googleapis.com/auth/drive.readonly" target="_blank" rel="external">https://www.googleapis.com/auth/drive.readonly</a></strong> as the scope.</p>
 <p>Authorize the API using Google ID and <strong>exchange authorization code for tokens(Step 2)</strong>. We will get the <strong>access token</strong> and <strong>refresh token</strong></p>
 <p>run<br><code>curl -H &quot;Authorization: Bearer XXXXX&quot; https://www.googleapis.com/drive/v3/files/YYYYY?alt=media -o ZZZZZ</code></p>
 <p>where</p>
