@@ -351,13 +351,20 @@
       
         
           
-            <p>Reference to <a href="&#39;https://stackoverflow.com/questions/37126437/download-large-google-drive-files&#39;">https://stackoverflow.com/questions/37126437/download-large-google-drive-files</a></p>
-<p>Go to <strong><a href="&#39;https://developers.google.com/oauthplayground/&#39;">OAuth 2.0 Playground</a></strong></p>
-<p>In <strong>Select &amp; authorize APIs(Step 1)</strong>,<br>select <strong>Drive API v3</strong> and then select <strong><a href="https://www.googleapis.com/auth/drive.readonly" target="_blank" rel="external">https://www.googleapis.com/auth/drive.readonly</a></strong> as the scope.</p>
-<p>Authorize the API using Google ID and <strong>exchange authorization code for tokens(Step 2)</strong>. We will get the <strong>access token</strong> and <strong>refresh token</strong></p>
-<p>run<br><code>curl -H &quot;Authorization: Bearer XXXXX&quot; https://www.googleapis.com/drive/v3/files/YYYYY?alt=media -o ZZZZZ</code></p>
-<p>where</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">XXXXX===&gt; Access Token</div><div class="line"></div><div class="line">YYYYY===&gt; File ID</div><div class="line"></div><div class="line">ZZZZZ===&gt; File Name that will be saved</div></pre></td></tr></table></figure>
+            <ul>
+<li><p>Reference to <a href="&#39;https://stackoverflow.com/questions/37126437/download-large-google-drive-files&#39;">https://stackoverflow.com/questions/37126437/download-large-google-drive-files</a></p>
+</li>
+<li><p>Go to <strong><a href="&#39;https://developers.google.com/oauthplayground/&#39;">OAuth 2.0 Playground</a></strong></p>
+</li>
+<li><p>In <strong>Select &amp; authorize APIs(Step 1)</strong>,<br>select <strong>Drive API v3</strong> and then select <strong><a href="https://www.googleapis.com/auth/drive.readonly" target="_blank" rel="external">https://www.googleapis.com/auth/drive.readonly</a></strong> as the scope.</p>
+</li>
+<li><p>Authorize the API using Google ID and <strong>exchange authorization code for tokens(Step 2)</strong>. We will get the <strong>access token</strong> and <strong>refresh token</strong></p>
+</li>
+<li><p>run<br><code>curl -H &quot;Authorization: Bearer XXXXX&quot; https://www.googleapis.com/drive/v3/files/YYYYY?alt=media -o ZZZZZ</code></p>
+<p>  where</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">XXXXX===&gt; Access Token</div><div class="line"></div><div class="line">YYYYY===&gt; File ID</div><div class="line"></div><div class="line">ZZZZZ===&gt; File Name that will be saved</div></pre></td></tr></table></figure>
+</li>
+</ul>
 
           
         
