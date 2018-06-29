@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1重新安裝 OpenCV參考https://blog.csdn.net/StefanSalvatore/article/details/65936692 先卸載刷機時安裝的 opencv4tegra 安裝該安裝的 Package # Some general development li">
+<meta name="description" content="How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1重新安裝 OpenCV參考https://blog.csdn.net/StefanSalvatore/article/details/65936692 先卸載刷機時安裝的 opencv4tegra 安裝該安裝的 Package 123456789101112# Some general">
 <meta name="keywords" content="Notes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Onboard Camera on Jetson TX1">
 <meta property="og:url" content="http://yoursite.com/2018/06/27/onboard-camera-on-tx1/index.html">
 <meta property="og:site_name" content="VICKY&#39;S BLOG">
-<meta property="og:description" content="How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1重新安裝 OpenCV參考https://blog.csdn.net/StefanSalvatore/article/details/65936692 先卸載刷機時安裝的 opencv4tegra 安裝該安裝的 Package # Some general development li">
-<meta property="og:updated_time" content="2018-06-27T05:20:53.646Z">
+<meta property="og:description" content="How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1重新安裝 OpenCV參考https://blog.csdn.net/StefanSalvatore/article/details/65936692 先卸載刷機時安裝的 opencv4tegra 安裝該安裝的 Package 123456789101112# Some general">
+<meta property="og:updated_time" content="2018-06-29T05:41:32.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Onboard Camera on Jetson TX1">
-<meta name="twitter:description" content="How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1重新安裝 OpenCV參考https://blog.csdn.net/StefanSalvatore/article/details/65936692 先卸載刷機時安裝的 opencv4tegra 安裝該安裝的 Package # Some general development li">
+<meta name="twitter:description" content="How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1重新安裝 OpenCV參考https://blog.csdn.net/StefanSalvatore/article/details/65936692 先卸載刷機時安裝的 opencv4tegra 安裝該安裝的 Package 123456789101112# Some general">
 
 
 
@@ -351,8 +351,9 @@
         <h1 id="How-to-Open-Onboard-Camera-On-Jetson-TX1-with-Jetpack-3-1"><a href="#How-to-Open-Onboard-Camera-On-Jetson-TX1-with-Jetpack-3-1" class="headerlink" title="How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1"></a>How to Open Onboard Camera On Jetson TX1 with Jetpack 3.1</h1><h2 id="重新安裝-OpenCV"><a href="#重新安裝-OpenCV" class="headerlink" title="重新安裝 OpenCV"></a>重新安裝 OpenCV</h2><p>參考<a href="&quot;https://blog.csdn.net/StefanSalvatore/article/details/65936692&quot;">https://blog.csdn.net/StefanSalvatore/article/details/65936692</a></p>
 <p>先卸載刷機時安裝的 opencv4tegra</p>
 <p>安裝該安裝的 Package</p>
-<p><code># Some general development libraries<br>sudo apt-get -y install build-essential make cmake cmake-curses-gui g++</code><br><code># libav video input/output development libraries<br>sudo apt-get -y install libavformat-dev libavutil-dev libswscale-dev  </code><br><code># Video4Linux camera development libraries<br>sudo apt-get -y install libv4l-dev</code><br><code># Eigen3 math development libraries<br>sudo apt-get -y install libeigen3-dev</code><br><code># OpenGL development libraries (to allow creating graphical windows)<br>sudo apt-get -y install libglew1.6-dev</code><br><code># GTK development libraries (to allow creating graphical windows)<br>sudo apt-get -y install libgtk2.0-dev</code></p>
-<p>從 Opencv 官網下載 2.4.13 版本的原始碼<br><code>mkdir build &amp;&amp; cd build</code><br><code>cmake -DWITH_CUDA=ON -DCUDA_ARCH_BIN=”5.3” -DCUDA_ARCH_PTX=”” -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DCUDA_FAST_MATH=ON .. </code><br><code>make -j8</code><br><code>make install</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># Some general development libraries  </div><div class="line">sudo apt-get -y install build-essential make cmake cmake-curses-gui g++</div><div class="line"># libav video input/output development libraries  </div><div class="line">sudo apt-get -y install libavformat-dev libavutil-dev libswscale-dev</div><div class="line"># Video4Linux camera development libraries  </div><div class="line">sudo apt-get -y install libv4l-dev </div><div class="line"># Eigen3 math development libraries  </div><div class="line">sudo apt-get -y install libeigen3-dev</div><div class="line"># OpenGL development libraries (to allow creating graphical windows)  </div><div class="line">sudo apt-get -y install libglew1.6-dev</div><div class="line"># GTK development libraries (to allow creating graphical windows)  </div><div class="line">sudo apt-get -y install libgtk2.0-dev</div></pre></td></tr></table></figure>
+<p>從 Opencv 官網下載 2.4.13 版本的原始碼</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mkdir build &amp;&amp; cd build</div><div class="line">cmake -DWITH_CUDA=ON -DCUDA_ARCH_BIN=&quot;5.3&quot; -DCUDA_ARCH_PTX=&quot;&quot; -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DCUDA_FAST_MATH=ON .. </div><div class="line">make -j8</div><div class="line">make install</div></pre></td></tr></table></figure>
 <h2 id="開啟-Onboard-Camera"><a href="#開啟-Onboard-Camera" class="headerlink" title="開啟 Onboard Camera"></a>開啟 Onboard Camera</h2><p>用 <code>gst-launch-1.0 nvcamerasrc ! nvoverlaysink</code> 指令測試 onboard camera 是否能開啟</p>
 <p>在 Python 中用以下 code 打開 onboard camera 並讀取，參考<a href="&quot;https://jkjung-avt.github.io/tx2-camera-with-python/&quot;">https://jkjung-avt.github.io/tx2-camera-with-python/</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import cv2</div><div class="line">gst_str = (&quot;nvcamerasrc ! &quot; &quot;video/x-raw(memory:NVMM), width=(int)2592, height=(int)1458, format=(string)I420, framerate=(fraction)30/1 ! &quot; &quot;nvvidconv ! video/x-raw, width=(int)&#123;&#125;, height=(int)&#123;&#125;, format=(string)BGRx ! &quot; &quot;videoconvert ! appsink&quot;).format(width, height)</div><div class="line">cv2.VideoCapture(gst_str)</div></pre></td></tr></table></figure>
